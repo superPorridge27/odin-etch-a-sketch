@@ -16,6 +16,24 @@ function createGrid(parentDivID, numOfSquares) {
     }
 }
 
-// Calling createGrid to instantiate the Grid
-createGrid("container", 16)
+const gridBtn = document.getElementById("gridBtn");
+gridBtn.addEventListener("click", function (e) {
+    // Prompt the user for grid size
+    let desiredGridSize = prompt("How big the grid should be? (0 to 100)");
+    
+    // Clear the grid
+    document.querySelectorAll(".squareDiv").forEach(e => e.remove);
+    const container = document.getElementById("container");
+    while(container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
+
+    // Draw the grid
+    if(desiredGridSize < 100 && desiredGridSize >= 0)
+    {
+        createGrid("container", desiredGridSize);
+    } else {
+        alert("Invalid grid size!");
+    }
+});
 
