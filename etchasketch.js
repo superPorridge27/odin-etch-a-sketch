@@ -7,6 +7,9 @@ function createGrid(parentDivID, numOfSquares) {
     for(let i = 0; i < totalSquares; i++) {
         const squareDiv = document.createElement("div");
         squareDiv.classList.add("squareDiv");
+        squareDiv.addEventListener('mouseover', function(e) {
+            e.target.style.backgroundColor = `#000`;
+        })
         squareDiv.style.width = `${divSize}px`;
         squareDiv.style.height = `${divSize}px`;
         parent.appendChild(squareDiv);
