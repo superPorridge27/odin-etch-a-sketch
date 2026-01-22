@@ -1,5 +1,5 @@
 // Create Square Divs to attach to a parent div
-function createRows(parentDivID, numOfSquares) {
+function createGrid(parentDivID, numOfSquares) {
     const parent = document.getElementById(parentDivID);
     const divSize = (500 / numOfSquares);
     const totalSquares = numOfSquares * numOfSquares;
@@ -13,4 +13,6 @@ function createRows(parentDivID, numOfSquares) {
     }
 }
 
-createRows("container", 16)
+// Calling createGrid to instantiate the Grid
+createGrid("container", 16)
+
