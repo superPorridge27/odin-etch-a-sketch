@@ -1,0 +1,14 @@
+.squareDiv {
+    width: 16px;
+    height: 16px;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 500px;
+}
